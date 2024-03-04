@@ -1,9 +1,10 @@
 <?php
+/* importo il main file di php */
 require __DIR__ . "/server.php";
 ?>
 
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
@@ -19,20 +20,24 @@ require __DIR__ . "/server.php";
 </head>
 
 <body>
-    <table class="table text-center">
-        <thead>
-            <tr>
-                <th scope="col">Nome Prodotto</th>
-                <th scope="col">Lingua originale</th>
-                <th scope="col">Voto / Percentuale Gradimento</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($productions as $production): ?>
-                <?php include __DIR__ . "/partials/table_row.php" ?>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+    <div class="container m-5">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Nome Prodotto</th>
+                    <th scope="col">Lingua originale</th>
+                    <th scope="col">Genere Principale</th>
+                    <th scope="col">Voto / Percentuale Gradimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($productions as $production): ?>
+                    <!-- linee di codice parzializzate che si ripetono -->
+                    <?php include __DIR__ . "/partials/table_row.php" ?>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
