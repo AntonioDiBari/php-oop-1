@@ -28,6 +28,7 @@ require __DIR__ . "/server.php";
                     <th scope="col">Lingua originale</th>
                     <th scope="col">Genere Principale</th>
                     <th scope="col">Voto / Percentuale Gradimento</th>
+                    <th scope="col">More info</th>
                 </tr>
             </thead>
             <tbody>
