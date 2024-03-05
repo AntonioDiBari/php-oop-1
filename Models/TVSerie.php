@@ -10,12 +10,12 @@ class TVSerie extends Production
         string $titleParam,
         string $langParam,
         $voteParam,
-        Genre $genreParam,
+        array $genresParam,
         int $seasonsParam,
         int $episodesParam,
 
     ) {
-        parent::__construct($titleParam, $langParam, $voteParam, $genreParam);
+        parent::__construct($titleParam, $langParam, $voteParam, $genresParam);
         $this->seasons = $seasonsParam;
         $this->episodes = $episodesParam;
     }

@@ -6,7 +6,13 @@
         <?= $production->lang ?>
     </td>
     <td>
-        <?= $production->genre->name ?>
+        <ul class="list-group">
+            <?php foreach ($production->genres as $genre): ?>
+                <li class="list-group-item">
+                    <?= $genre->name ?>
+                </li>
+            <?php endforeach ?>
+        </ul>
     </td>
     <td>
         <?= $production->vote ?> /

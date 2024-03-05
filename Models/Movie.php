@@ -10,12 +10,12 @@ class Movie extends Production
         string $titleParam,
         string $langParam,
         $voteParam,
-        Genre $genreParam,
+        array $genresParam,
         int $profitsParam,
         int $durationParam,
 
     ) {
-        parent::__construct($titleParam, $langParam, $voteParam, $genreParam);
+        parent::__construct($titleParam, $langParam, $voteParam, $genresParam);
         $this->profits = $profitsParam;
         $this->duration = $durationParam;
     }

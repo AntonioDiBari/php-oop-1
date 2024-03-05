@@ -7,7 +7,7 @@ class Production
     public $title;
     public $lang;
     public $vote;
-    public $genre;
+    public $genres;
 
     /* li assegno mediante la func costruct */
 
@@ -16,12 +16,12 @@ class Production
         string $langParam,
         $voteParam,
         /* classe e parametro */
-        Genre $genreParam
+        array $genresParam
     ) {
         $this->title = $titleParam;
         $this->lang = $langParam;
         $this->vote = ($voteParam >= 0 && $voteParam <= 10) ? $voteParam : "Immettere nei parametri voto da 1 a 10";
-        $this->genre = $genreParam;
+        $this->genres = $genresParam;
 
     }
 
