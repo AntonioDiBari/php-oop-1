@@ -21,7 +21,7 @@ class Production
         $this->title = $titleParam;
         $this->lang = $langParam;
         $this->vote = ($voteParam >= 0 && $voteParam <= 10) ? $voteParam : "Immettere nei parametri voto da 1 a 10";
-        $this->genres = $genresParam;
+        $this->set_genres($genresParam);
 
     }
 
@@ -36,4 +36,14 @@ class Production
         }
 
     }
+    public function set_genres($genres)
+    {
+        foreach ($genres as $genre) {
+            if (!$genre instanceof Genre)
+                throw new Exception("Genre Error");
+
+        }
+        $this->genres = $genres;
+    }
+
 }
